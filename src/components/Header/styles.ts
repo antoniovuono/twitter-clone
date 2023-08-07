@@ -3,12 +3,11 @@ import LogotipoIcon from "@assets/icons/logotipo.svg";
 
 export const Container = styled.View`
     padding: 0 20px;
-    height: 50px;
+    height: 55px;
     width: 100%;
-    border-bottom: 0.5px solid;
-    /* border-bottom-width: 1px;
-    border-bottom-color: ${({theme}) => theme.colors.GRAY_200}; */
-    background-color: ${({theme}) => theme.colors.WHITE};
+    border-bottom-width: 0.2px;
+    border-bottom-color: ${({theme}) => theme.colors.GRAY_200};
+    background-color: ${({theme}) => theme.colors.BLACK};
 
     flex-direction: row;
     align-items: center;

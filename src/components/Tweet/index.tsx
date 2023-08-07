@@ -1,4 +1,6 @@
 import React from "react";
+import { ChatCircleText, Heart, Export } from "phosphor-react-native";
+import { useTheme } from "styled-components";
 
 import {
   Avatar,
@@ -8,29 +10,60 @@ import {
   TextContent,
   TextLabel,
   TweetContent,
+  TweetInteraction,
+  TweetInteractionButton,
+  TweetInteractionText,
   TweetText,
 } from "./styles";
+import { TweetProps } from "./interface";
 
-export const Tweet = () => {
+export const Tweet = ({
+  uri,
+  name,
+  username,
+  date,
+  tweet,
+  onCommentPressed,
+  onLikePressed,
+  onSharePressed,
+}: TweetProps) => {
   return (
     <Container>
       <AvatarContent>
-        <Avatar source={{ uri: "https://avatars.githubusercontent.com/u/7297243?v=4" }} />
+        <Avatar source={{ uri: uri }} />
       </AvatarContent>
 
       <TweetContent>
         <IdentificationContent>
-          <TextLabel type="PRIMARY">Antonio Vuono</TextLabel>
-          <TextLabel>@antoniovuono</TextLabel>
-          <TextLabel>12h</TextLabel>
+          <TextLabel type="PRIMARY">{name}</TextLabel>
+          <TextLabel>{username}</TextLabel>
+          <TextLabel>{date}</TextLabel>
         </IdentificationContent>
-
         <TextContent>
-          <TweetText>
-            UXR/UX: You can only bring one item to a remote island to assist your research of native
-            use of tools and usability. What do you bring? #TellMeAboutYou
-          </TweetText>
+          <TweetText numberOfLines={4}>{tweet}</TweetText>
         </TextContent>
+
+        <TweetInteraction>
+          <TweetInteractionButton
+            onPress={onCommentPressed}
+            hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
+            <ChatCircleText color="#000000" size={18} />
+            <TweetInteractionText>5</TweetInteractionText>
+          </TweetInteractionButton>
+
+          <TweetInteractionButton
+            onPress={onLikePressed}
+            hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
+            <Heart color="#000000" size={18} />
+            <TweetInteractionText>25</TweetInteractionText>
+          </TweetInteractionButton>
+
+          <TweetInteractionButton
+            onPress={onSharePressed}
+            hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
+            <Export color="#000000" size={18} />
+          </TweetInteractionButton>
+        </TweetInteraction>
       </TweetContent>
     </Container>
   );
