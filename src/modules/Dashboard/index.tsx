@@ -1,11 +1,14 @@
 import React from "react";
-
-import { Container, Title } from "./styles";
+import { Container } from "./styles";
+import { Header } from "@components/Header";
 
 export const Dashboard = () => {
   return (
     <Container>
-      <Title>Welcome to Dashboard</Title>
+      <Header
+        uri="https://avatars.githubusercontent.com/u/7297243?v=4"
+        onAvatarPressed={() => {}}
+      />
     </Container>
   );
 };
