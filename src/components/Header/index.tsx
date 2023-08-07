@@ -2,16 +2,12 @@ import React from "react";
 
 import { Avatar, Container, LogoContainer, LogoIcon } from "./styles";
 import { TouchableOpacity } from "react-native";
+import { HeaderProps } from "./interfaces";
 
-type Props = {
-  uri: string;
-  onAvatarPressed: () => void;
-};
-
-export const Header = ({ uri, onAvatarPressed }: Props) => {
+export const Header = ({ uri, onAvatarPressed }: HeaderProps) => {
   return (
     <Container>
-      <TouchableOpacity onPress={onAvatarPressed}>
+      <TouchableOpacity onPress={onAvatarPressed} activeOpacity={0.7}>
         <Avatar source={{ uri: uri }} />
       </TouchableOpacity>
 

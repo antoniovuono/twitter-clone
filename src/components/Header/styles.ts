@@ -6,8 +6,8 @@ export const Container = styled.View`
     height: 50px;
     width: 100%;
     border-bottom: 0.5px solid;
-    border-bottom-width: 1px;
-    border-bottom-color: ${({theme}) => theme.colors.GRAY_200};
+    /* border-bottom-width: 1px;
+    border-bottom-color: ${({theme}) => theme.colors.GRAY_200}; */
     background-color: ${({theme}) => theme.colors.WHITE};
 
     flex-direction: row;
