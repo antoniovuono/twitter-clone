@@ -1,12 +1,13 @@
 import React from "react";
-import { ChatCircleText, Heart, Export } from "phosphor-react-native";
-import { useTheme } from "styled-components";
 
 import {
   Avatar,
   AvatarContent,
+  CommentsIcon,
   Container,
   IdentificationContent,
+  LikeIcon,
+  ShareIcon,
   TextContent,
   TextLabel,
   TweetContent,
@@ -47,21 +48,22 @@ export const Tweet = ({
           <TweetInteractionButton
             onPress={onCommentPressed}
             hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
-            <ChatCircleText color="#000000" size={18} />
+            <CommentsIcon />
             <TweetInteractionText>5</TweetInteractionText>
           </TweetInteractionButton>
 
           <TweetInteractionButton
             onPress={onLikePressed}
             hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
-            <Heart color="#000000" size={18} />
+            <LikeIcon />
             <TweetInteractionText>25</TweetInteractionText>
           </TweetInteractionButton>
 
           <TweetInteractionButton
             onPress={onSharePressed}
             hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
-            <Export color="#000000" size={18} />
+            <ShareIcon style={{ marginRight: 10 }} />
+            <TweetInteractionText> </TweetInteractionText>
           </TweetInteractionButton>
         </TweetInteraction>
       </TweetContent>

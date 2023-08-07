@@ -1,6 +1,7 @@
 import { css } from 'styled-components';
 import styled from 'styled-components/native';
 import { IdentificationProps } from './interface';
+import { ChatCircleText, Export, Heart } from 'phosphor-react-native';
 
 
 export const Container = styled.View`
@@ -68,10 +69,13 @@ export const TweetInteractionButton = styled.TouchableOpacity`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    justify-content: center;
 `;
 
 export const TweetInteractionText = styled.Text`
    margin-left: 3px;
+   color: ${({theme}) => theme.colors.GRAY_200};
 `;
 
 export const TweetInteraction = styled.View`
@@ -79,3 +83,18 @@ export const TweetInteraction = styled.View`
     flex-direction: row;
     justify-content: flex-end;
 `;
+
+export const CommentsIcon = styled(ChatCircleText).attrs(({theme}) => ({
+    color: theme.colors.GRAY_200,
+    size: 18
+}))``;
+
+export const LikeIcon = styled(Heart).attrs(({theme}) => ({
+    color: theme.colors.GRAY_200,
+    size: 18
+}))``;
+
+export const ShareIcon = styled(Export).attrs(({theme}) => ({ 
+    color: theme.colors.GRAY_200,
+    size: 18
+}))``;
