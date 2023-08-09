@@ -3,7 +3,7 @@ import LogotipoIcon from "@assets/icons/logotipo.svg";
 
 export const Container = styled.View`
     width: 100%;
-    padding: 5px 20px;
+    padding: 10px 20px;
     flex-direction: row;
     align-items: center;
     border-bottom-width: 0.2px;
