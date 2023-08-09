@@ -6,7 +6,7 @@ export const Container = styled.View`
     padding: 10px 20px;
     flex-direction: row;
     align-items: center;
-    border-bottom-width: 0.2px;
+    border-bottom-width: 0.5px;
     border-bottom-color: ${({theme}) => theme.colors.GRAY_200};
     background-color: ${({theme}) => theme.colors.BLACK};
 `;
