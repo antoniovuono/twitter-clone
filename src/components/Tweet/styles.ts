@@ -2,11 +2,11 @@ import { css } from 'styled-components';
 import styled from 'styled-components/native';
 import { IdentificationProps } from './interface';
 import { ChatCircleText, Export, Heart } from 'phosphor-react-native';
+import { RFValueConverter } from '../../utils/respFontSize';
 
 
 export const Container = styled.View`
    width: 100%;
-   height: 143px;
    padding: 10px 20px;
    flex-direction: row;
    border-bottom-width: 0.2px;
@@ -14,10 +14,8 @@ export const Container = styled.View`
 `;
 
 export const AvatarContent = styled.View`
-    height: 100%;
     width: 16%;
     justify-content: center;
-
 `;
 
 
@@ -30,16 +28,14 @@ export const Avatar = styled.Image`
 export const TweetContent = styled.View`
     width: 84%;
     padding: 2px 8px;
-
 `;
 
 export const IdentificationContent = styled.View`
     flex-direction: row;
-    align-items: center;
 `;
 
 export const TextLabel = styled.Text<IdentificationProps>`
-    font-size: 14px;
+    font-size: ${RFValueConverter(12)}px;
     letter-spacing: -0.3px;
     margin-right: 3px;
 
@@ -50,11 +46,11 @@ export const TextLabel = styled.Text<IdentificationProps>`
 `;
 
 export const TextContent= styled.View`
-    padding: 2px 0;
+    height: 80px;
 `;
 
 export const TweetText = styled.Text`
-    font-size: 14px;
+    font-size: ${RFValueConverter(12)}px;
     letter-spacing: -0.3px;
     margin-right: 3px;
 

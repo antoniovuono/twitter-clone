@@ -41,22 +41,22 @@ export const Dashboard = () => {
         onAvatarPressed={() => {}}
       />
 
-      {/* <FlashList
+      <FlashList
         data={tweets}
         estimatedItemSize={30}
         renderItem={({ item }) => (
           <Tweet
             uri={item.uri}
             name={item.name}
-            username={item.username}
+            username={`@${item.username}`}
             tweet={item.tweet}
-            date={item.date}
+            date={`${item.date}h`}
             onLikePressed={() => {}}
             onCommentPressed={() => {}}
             onSharePressed={() => {}}
           />
         )}
-      /> */}
+      />
     </Container>
   );
 };
