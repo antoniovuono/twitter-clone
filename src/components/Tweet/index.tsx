@@ -62,8 +62,7 @@ export const Tweet = ({
           <TweetInteractionButton
             onPress={onSharePressed}
             hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
-            <ShareIcon style={{ marginRight: 10 }} />
-            <TweetInteractionText> </TweetInteractionText>
+            <ShareIcon style={{ marginRight: 15 }} />
           </TweetInteractionButton>
         </TweetInteraction>
       </TweetContent>

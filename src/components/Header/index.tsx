@@ -1,6 +1,6 @@
 import React from "react";
-
-import { Avatar, Container, LogoContainer, LogoIcon } from "./styles";
+import LogotipoIcon from "@assets/icons/logotipo.svg";
+import { Avatar, Container, LogoContent } from "./styles";
 import { TouchableOpacity } from "react-native";
 import { HeaderProps } from "./interfaces";
 
@@ -11,9 +11,9 @@ export const Header = ({ uri, onAvatarPressed }: HeaderProps) => {
         <Avatar source={{ uri: uri }} />
       </TouchableOpacity>
 
-      <LogoContainer>
-        <LogoIcon />
-      </LogoContainer>
+      <LogoContent>
+        <LogotipoIcon />
+      </LogoContent>
     </Container>
   );
 };

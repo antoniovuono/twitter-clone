@@ -75,7 +75,11 @@ export const TweetInteractionButton = styled.TouchableOpacity`
 
 export const TweetInteractionText = styled.Text`
    margin-left: 3px;
-   color: ${({theme}) => theme.colors.GRAY_200};
+   font-size: 14px;
+  ${({theme}) => css`
+    color: ${theme.colors.GRAY_200};
+    font-family: ${theme.fonts.PRIMARY_REGULAR};
+  `}
 `;
 
 export const TweetInteraction = styled.View`
