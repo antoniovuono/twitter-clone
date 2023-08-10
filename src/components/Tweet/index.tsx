@@ -8,13 +8,13 @@ import {
   IdentificationContent,
   LikeIcon,
   ShareIcon,
-  TextContent,
+  Content,
   TextLabel,
   TweetContent,
-  TweetInteraction,
   TweetInteractionButton,
   TweetInteractionText,
   TweetText,
+  TweetInteractionContent,
 } from "./styles";
 import { TweetProps } from "./interface";
 
@@ -36,15 +36,16 @@ export const Tweet = ({
 
       <TweetContent>
         <IdentificationContent>
-          <TextLabel type="PRIMARY">{name}</TextLabel>
+          <TextLabel isBold>{name}</TextLabel>
           <TextLabel>{username}</TextLabel>
           <TextLabel>{date}</TextLabel>
         </IdentificationContent>
-        <TextContent>
-          <TweetText numberOfLines={4}>{tweet}</TweetText>
-        </TextContent>
 
-        <TweetInteraction>
+        <Content>
+          <TweetText>{tweet}</TweetText>
+        </Content>
+
+        <TweetInteractionContent>
           <TweetInteractionButton
             onPress={onCommentPressed}
             hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
@@ -64,7 +65,7 @@ export const Tweet = ({
             hitSlop={{ top: 15, bottom: 15, right: 15, left: 15 }}>
             <ShareIcon style={{ marginRight: 15 }} />
           </TweetInteractionButton>
-        </TweetInteraction>
+        </TweetInteractionContent>
       </TweetContent>
     </Container>
   );

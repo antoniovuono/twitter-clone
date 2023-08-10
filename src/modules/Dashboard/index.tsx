@@ -25,6 +25,24 @@ const data = [
     tweet:
       "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou",
   },
+  {
+    id: "2",
+    uri: "https://avatars.githubusercontent.com/u/7297243?v=4",
+    name: "Antonio Vuono",
+    username: "antoniovuono",
+    date: "12",
+    tweet:
+      "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou",
+  },
+  {
+    id: "3",
+    uri: "https://avatars.githubusercontent.com/u/7297243?v=4",
+    name: "Antonio Vuono",
+    username: "antoniovuono",
+    date: "12",
+    tweet:
+      "UXR/UX: You can only bring one item to a remote island to assist your research of native use of tools and usability. What do you bring? #TellMeAboutYou",
+  },
 ];
 
 export const Dashboard = () => {
@@ -42,6 +60,7 @@ export const Dashboard = () => {
       />
 
       <FlashList
+        contentContainerStyle={{ paddingBottom: 20 }}
         data={tweets}
         estimatedItemSize={30}
         renderItem={({ item }) => (

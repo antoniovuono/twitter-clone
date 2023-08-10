@@ -1,9 +1,3 @@
-export type IdentificationText = 'PRIMARY' | 'SECONDARY';
-
-export type IdentificationProps = {
-    type?: IdentificationText;
-};
-
 export type TweetProps = {
     uri: string;
     name: string;
